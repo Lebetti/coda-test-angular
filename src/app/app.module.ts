@@ -11,15 +11,23 @@ import { MiaCoreModule, MIA_GOOGLE_STORAGE_PROVIDER } from '@agencycoda/mia-core
 import { MiaTableModule } from '@agencycoda/mia-table';
 import { MiaFormModule } from '@agencycoda/mia-form';
 import { MiaLoadingModule } from '@agencycoda/mia-loading';
+import { ClientTableComponent } from './client-table/client-table.component';
+import { TableActionsButtonsComponent } from './components/table-actions-buttons/table-actions-buttons.component';
+import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
+import { PropertyToNameModule } from './pipes/property-to-name.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClientTableComponent,
+    TableActionsButtonsComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PropertyToNameModule,
 
     // Agency Coda Modules
     MiaCoreModule,

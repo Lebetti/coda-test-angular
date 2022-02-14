@@ -1,0 +1,11 @@
+<div id="client-table-container" class="table-container">
+    <div class="table-header">
+        <h2 class="primary-title">
+            Listado de clientes
+        </h2>
+        <button mat-raised-button class="btn std-btn add-button" (click)="displayFormAndSaveItem()">+ Nuevo cliente</button>
+    </div>
+    <div class="table-content-container">
+        <mia-table #miaTable [config]="tableConfig"></mia-table>
+    </div>
+</div>

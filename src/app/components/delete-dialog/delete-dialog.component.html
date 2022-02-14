@@ -1,0 +1,33 @@
+
+<div class="">
+    <h3>
+        <span>
+            Eliminar {{config.entityName}}
+        </span>
+    </h3>
+    <div class="dialog-content">
+        <p>
+            ¿Está seguro que desea <strong>eliminar {{config.entityName}}</strong> cuya información es la siguiente?
+        </p>
+        <div class="data">
+            <h4>
+                Información del {{config.entityName}}
+            </h4>
+            <ng-container *ngFor="let propName of objectKeys(config.item)" >
+                <div *ngIf="propValue(propName)" class="data-item">
+                    <small>
+                        {{propName|PropertyToName}}:
+                    </small>
+                    <p class="value">
+                        {{propValue(propName)}}
+                    </p>
+                </div>
+                
+            </ng-container>
+        </div>
+    </div>
+    <div class="mat-dialog-actions">
+        <button class="btn std-btn" (click)="cancel()">Cancelar</button>
+        <button class="btn std-btn delete-button-primary" (click)="delete()">Eliminar</button>
+    </div>
+</div>

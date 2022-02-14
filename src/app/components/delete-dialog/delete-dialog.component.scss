@@ -1,0 +1,36 @@
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--delete-color);
+}
+
+.dialog-content{
+    color: var(--text-black-color);
+    h4{
+        padding: 10px;
+        margin: 0;
+        color: var(--text-black-color);
+    }
+    
+    
+    strong{
+        font-weight: 500;
+        color: var(--delete-color);
+    }
+    
+    .data{
+        padding: 16px 16px 28px 16px;
+        background-color: var(--gray-background);
+        border-radius: 8px;
+        .data-item{
+            padding: 10px;
+            border-bottom: 1px solid var(--gray-background-border);
+            small{
+                color:var(--text-gray-color);
+            }
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

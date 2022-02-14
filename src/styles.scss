@@ -1,4 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme.scss";
+@import "./assets/fonts/fonts.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    --primary-color: #44115b;
+    --primary-color-hover: #5e0d4e;
+    --primary-color-disabled: #7b6685;
+    --secondary-color: #ffe67f;
+    --secondary-color-hover: rgb(253, 220, 80);
+    --delete-color: #dc3545;
+    --delete-color-hover: #e9273a;
+    --delete-color-background: #ffb1b1;
+    --shadow-color: #00000030;
+    --add-item-color: rgb(36, 160, 36);
+    --add-item-color-hover: rgb(36, 185, 36);
+    --border-color: #e0e0e0;
+    --gray-background:#d0d0d0;
+    --gray-background-border: #bfbfbf;
+    --text-gray-color:#6a6a6a;
+    --text-black-color:#444;
+}
+
+#client-table-container {
+    .table-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px var(--shadow-color);
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all ease 225ms;
+    &.std-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    &.primary-button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        &:hover {
+            background-color: var(--primary-color-hover);
+        }
+    }
+    &.secondary-button {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+        &:hover {
+            background-color: var(--secondary-color-hover);
+        }
+    }
+    &.delete-button-primary {
+        background-color: var(--delete-color);
+        color: white;
+        &:hover {
+            background-color: var(--delete-color-hover);
+        }
+    }
+    &.delete-button-secondary {
+        background-color: #eee;
+        color: var(--delete-color);
+        &:hover {
+            background-color: #e5e5e5;
+        }
+    }
+    &:first-child {
+        margin-right: 10px;
+    }
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: var(--gray-background);
+}
+
+.modal-full-width-mobile {
+    h4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--gray-background-border);
+        span {
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+    }
+    .form-modal {
+        padding: 8px 0px;
+        mia-email-field {
+            mat-form-field {
+                width: 100%;
+            }
+        }
+    }
+    .message-error {
+        margin-top: 12px;
+        background-color: var(--delete-color);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+        p{ 
+            font-size: 10px;
+
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.mat-dialog-actions {
+    justify-content: right;
+}
